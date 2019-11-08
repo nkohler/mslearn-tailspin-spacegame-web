@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using TailSpin.SpaceGame.Web.Models;
 
 namespace TailSpin.SpaceGame.Web.Controllers
@@ -15,14 +16,17 @@ namespace TailSpin.SpaceGame.Web.Controllers
         private readonly IDocumentDBRepository<Score> _scoreRepository;
         // User profile repository.
         private readonly IDocumentDBRepository<Profile> _profileRespository;
+        private readonly ILogger<HomeController> _logger;
 
         public HomeController(
             IDocumentDBRepository<Score> scoreRepository,
-            IDocumentDBRepository<Profile> profileRespository
+            IDocumentDBRepository<Profile> profileRespository,
+            ILogger<HomeController> logger
             )
         {
             _scoreRepository = scoreRepository;
             _profileRespository = profileRespository;
+            _logger = logger;
         }
 
         public async Task<IActionResult> Index(
@@ -107,6 +111,7 @@ namespace TailSpin.SpaceGame.Web.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "An error occured.");
                 return View(vm);
             }
         }
@@ -121,6 +126,7 @@ namespace TailSpin.SpaceGame.Web.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "An error occured.");
                 return RedirectToAction("/");
             }
         }
