@@ -36,8 +36,18 @@ namespace TailSpin.SpaceGame.Web.Models
     public struct ScoreProfile
     {
         // The player's score.
-        public Score Score;
+        private Score _score;
+        public Score Score
+        {
+            get { return _score; }
+            set { _score = value; }
+        }
         // The player's profile.
-        public Profile Profile;
+        private Profile _profile;
+        public Profile Profile
+        {
+            get { return _profile; }
+            set { _profile = value; }
+        }
     }
 }
