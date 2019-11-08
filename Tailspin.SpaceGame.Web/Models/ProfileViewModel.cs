@@ -7,7 +7,7 @@
         public Profile Profile
         {
             get { return _profile; }
-            set { _profile = profile; }
+            set { _profile = value; }
         }
         // The player's rank according to the active filter.
         private string _rank;
