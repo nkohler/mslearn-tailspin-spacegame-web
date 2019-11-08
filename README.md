@@ -1,3 +1,4 @@
+[![Build Status](https://nkohler.visualstudio.com/Space%20game%20-%20web/_apis/build/status/nkohler.mslearn-tailspin-spacegame-web?branchName=master)](https://nkohler.visualstudio.com/Space%20game%20-%20web/_build/latest?definitionId=3&branchName=master) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nkohler-space-game-web-666&metric=alert_status)](https://sonarcloud.io/dashboard?id=nkohler-space-game-web-666)
 
 # Contributing
 
