@@ -43,7 +43,7 @@ namespace TailSpin.SpaceGame.Web.Models
             set { _score = value; }
         }
         // The player's profile.
-        private Profile _profile
+        private Profile _profile;
         public Profile Profile
         {
             get { return _profile; }
