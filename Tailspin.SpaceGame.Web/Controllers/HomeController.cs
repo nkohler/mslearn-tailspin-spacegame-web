@@ -110,7 +110,7 @@ namespace TailSpin.SpaceGame.Web.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "An error occured.")
+                _logger.LogError(ex, "An error occured.");
                 return View(vm);
             }
         }
@@ -125,7 +125,7 @@ namespace TailSpin.SpaceGame.Web.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "An error occured.")
+                _logger.LogError(ex, "An error occured.");
                 return RedirectToAction("/");
             }
         }
