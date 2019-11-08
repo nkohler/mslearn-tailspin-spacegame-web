@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using TailSpin.SpaceGame.Web.Models;
 
 namespace TailSpin.SpaceGame.Web.Controllers
